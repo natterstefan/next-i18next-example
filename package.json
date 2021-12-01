@@ -1,7 +1,8 @@
 {
-  "name": "v10",
+  "name": "next-i18next-example",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
+  "author": "Stefan Natter",
   "license": "MIT",
   "scripts": {
     "format": "prettier --write '{components,pages,public}/**/*.{js,json}'",
@@ -18,5 +19,12 @@
   "devDependencies": {
     "prettier": "2.5.0",
     "prop-types": "15.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/natterstefan/next-i18next-example"
+  },
+  "bugs": {
+    "url": "https://github.com/natterstefan/next-i18next-example/issues"
   }
 }
