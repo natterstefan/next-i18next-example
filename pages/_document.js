@@ -6,7 +6,10 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+          <link
+            href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+            rel="stylesheet"
+          />
         </Head>
         <body className="p-4">
           <Main />

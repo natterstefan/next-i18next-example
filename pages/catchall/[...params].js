@@ -30,18 +30,10 @@ const CatchAll = () => {
       <main className="flex flex-col">
         <h1>Params: {slug.join('/')}</h1>
         <Link href={router.asPath + '/deeper'}>
-          <button
-            type='button'
-          >
-            {t('go-to-next-catchall')}
-          </button>
+          <button type="button">{t('go-to-next-catchall')}</button>
         </Link>
-        <Link href='/'>
-          <button
-            type='button'
-          >
-            {t('back-to-home')}
-          </button>
+        <Link href="/">
+          <button type="button">{t('back-to-home')}</button>
         </Link>
       </main>
       <Footer />
@@ -51,7 +43,7 @@ const CatchAll = () => {
 
 export const getServerSideProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['catchall-page']),
+    ...(await serverSideTranslations(locale, ['catchall-page'])),
   },
 })
 

@@ -9,7 +9,6 @@ import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 
 const Homepage = () => {
-
   const router = useRouter()
   const { t } = useTranslation('common')
 
@@ -17,29 +16,16 @@ const Homepage = () => {
     <Page>
       <Header title={t('title')} />
       <main className="flex flex-col">
-        <Link
-          href='/'
-          locale={router.locale === 'en' ? 'de' : 'en'}
-        >
-          <button>
-            {t('change-locale')}
-          </button>
+        <Link href="/" locale={router.locale === 'en' ? 'de' : 'en'}>
+          <button>{t('change-locale')}</button>
         </Link>
 
-        <Link href='/second-page'>
-          <button
-            type='button'
-          >
-            {t('to-second-page')}
-          </button>
+        <Link href="/second-page">
+          <button type="button">{t('to-second-page')}</button>
         </Link>
 
-        <Link href='/catchall/some-params'>
-          <button
-            type='button'
-          >
-            {t('to-catchall-page')}
-          </button>
+        <Link href="/catchall/some-params">
+          <button type="button">{t('to-catchall-page')}</button>
         </Link>
       </main>
       <Footer />
@@ -49,7 +35,7 @@ const Homepage = () => {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['common']),
+    ...(await serverSideTranslations(locale, ['common'])),
   },
 })
 
